@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* Isso vai forçar o fundo a ser preto e o texto claro em qualquer lugar */
+@layer base {
+  :root {
+    --background: #09090b !important;
+    --foreground: #fafafa !important;
+  }
+
+  body {
+    background-color: #09090b !important; /* Força o preto do Zinc-950 */
+    color: #fafafa !important;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
+/* Mantendo sua animação */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
